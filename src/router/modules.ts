@@ -43,53 +43,53 @@ const routeModuleList: Array<RouteRecordRaw> = [
   //     },
   //   ],
   // },
+  // {
+  //   path: '/message',
+  //   name: 'Message',
+  //   redirect: '/message/index',
+  //   component: Layout,
+  //   meta: {
+  //     title: '图表',
+  //     icon: 'i-simple-icons:soundcharts',
+  //   },
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'MessagePage',
+  //       meta: {
+  //         keepAlive: false,
+  //       },
+  //       component: () => import('@/views/message/index.vue'),
+  //     },
+  //   ],
+  // },
+  // {
+  //   path: '/example',
+  //   name: 'Example',
+  //   redirect: '/example/index',
+  //   component: Layout,
+  //   meta: {
+  //     title: '示例',
+  //     icon: 'i-material-symbols:award-star',
+  //   },
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'ExamplePage',
+  //       meta: {
+  //         keepAlive: false,
+  //       },
+  //       component: () => import('@/views/example/index.vue'),
+  //     },
+  //   ],
+  // },
   {
-    path: '/message',
-    name: 'Message',
-    redirect: '/message/index',
+    path: '/mine',
+    name: 'Mine',
+    redirect: '/mine/index',
     component: Layout,
     meta: {
-      title: '图表',
-      icon: 'i-simple-icons:soundcharts',
-    },
-    children: [
-      {
-        path: 'index',
-        name: 'MessagePage',
-        meta: {
-          keepAlive: false,
-        },
-        component: () => import('@/views/message/index.vue'),
-      },
-    ],
-  },
-  {
-    path: '/example',
-    name: 'Example',
-    redirect: '/example/index',
-    component: Layout,
-    meta: {
-      title: '示例',
-      icon: 'i-material-symbols:award-star',
-    },
-    children: [
-      {
-        path: 'index',
-        name: 'ExamplePage',
-        meta: {
-          keepAlive: false,
-        },
-        component: () => import('@/views/example/index.vue'),
-      },
-    ],
-  },
-  {
-    path: '/my',
-    name: 'My',
-    redirect: '/my/index',
-    component: Layout,
-    meta: {
-      title: '我的',
+      title: 'Mine',
       icon: 'i-simple-icons:docsify',
     },
     children: [
@@ -100,12 +100,12 @@ const routeModuleList: Array<RouteRecordRaw> = [
           keepAlive: false,
           hiddenHeader: true,
         },
-        component: () => import('@/views/my/index.vue'),
+        component: () => import('@/views/mine/index.vue'),
       },
     ],
   },
 
-  // my innerPage
+  // mine innerPage
   {
     path: '/editUserInfo',
     name: 'EditUserInfo',
@@ -113,7 +113,7 @@ const routeModuleList: Array<RouteRecordRaw> = [
       title: '编辑个人信息',
       innerPage: true,
     },
-    component: () => import('@/views/my/EditUserInfo.vue'),
+    component: () => import('@/views/mine/EditUserInfo.vue'),
   },
   {
     path: '/editNickname',
@@ -123,7 +123,7 @@ const routeModuleList: Array<RouteRecordRaw> = [
       innerPage: true,
       keepAlive: true,
     },
-    component: () => import('@/views/my/EditNickname.vue'),
+    component: () => import('@/views/mine/EditNickname.vue'),
   },
   {
     path: '/editSign',
@@ -132,7 +132,7 @@ const routeModuleList: Array<RouteRecordRaw> = [
       title: '修改签名',
       innerPage: true,
     },
-    component: () => import('@/views/my/EditSign.vue'),
+    component: () => import('@/views/mine/EditSign.vue'),
   },
   {
     path: '/accountSetting',
@@ -141,7 +141,7 @@ const routeModuleList: Array<RouteRecordRaw> = [
       title: '账号与安全',
       innerPage: true,
     },
-    component: () => import('@/views/my/AccountSetting.vue'),
+    component: () => import('@/views/mine/AccountSetting.vue'),
   },
   {
     path: '/changePassword',
@@ -150,7 +150,7 @@ const routeModuleList: Array<RouteRecordRaw> = [
       title: '修改登录密码',
       innerPage: true,
     },
-    component: () => import('@/views/my/ChangePassword.vue'),
+    component: () => import('@/views/mine/ChangePassword.vue'),
   },
   {
     path: '/themeSetting',
@@ -159,7 +159,7 @@ const routeModuleList: Array<RouteRecordRaw> = [
       title: '主题设置',
       innerPage: true,
     },
-    component: () => import('@/views/my/ThemeSetting.vue'),
+    component: () => import('@/views/mine/ThemeSetting.vue'),
   },
 ]
 

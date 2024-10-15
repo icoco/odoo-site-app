@@ -19,7 +19,7 @@
         </p>
       </div>
       <van-divider class="w-full" />
-
+<!-- 
       <van-cell :border="false" title="个人信息" is-link to="/editUserInfo">
         <template #icon>
           <i class="i-mingcute:idcard-fill mr-2 text-xl" />
@@ -42,9 +42,24 @@
         <template #icon>
           <i class="i-material-symbols:list-alt-rounded mr-2 text-xl" />
         </template>
+      </van-cell> -->
+      <van-cell :border="false" title="Theme" is-link to="/themeSetting">
+        <template #icon>
+          <i class="i-material-symbols:palette mr-2 text-xl" />
+        </template>
+      </van-cell>
+      <van-cell :border="false" title="">
+        <template #icon>
+          <i />
+        </template>
+      </van-cell>
+      <van-cell :border="false" title="">
+        <template #icon>
+          <i />
+        </template>
       </van-cell>
 
-      <van-cell :border="false" title="退出登录" is-link @click="showLogoutAction = true">
+      <van-cell :border="false" title="Logout" is-link @click="showLogoutAction = true">
         <template #icon>
           <i class="i-solar:logout-3-bold mr-2 text-xl" />
         </template>
@@ -54,8 +69,8 @@
         v-model:show="showLogoutAction"
         teleport="body"
         :actions="logoutActions"
-        cancel-text="取消"
-        description="确认退出登录吗"
+        cancel-text="Cancel"
+        description="Are you sure logout?"
         close-on-click-action
       />
     </div>
@@ -73,11 +88,11 @@ const { nickname, avatar, cover, sign } = userStore.getUserInfo
 
 const logoutActions = [
   {
-    name: '退出登录',
+    name: 'Logout',
     color: '#ee0a24',
     callback: () => {
       userStore.Logout()
-      showToast('退出成功')
+      showToast('Logout success!')
     },
   },
 ]

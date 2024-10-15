@@ -26,13 +26,13 @@ const getSdk = computed(() => {
   return userStore.getSdk
 })
 
-profile('Vue Demo App')
+profile('Vue Odoo Site App')
 
-async function initOdooWebSDK() {
+async function initOdooWebClient() {
   const option = new DefaultClientManagerOption()
   option.root = ''
   getClientManager().setup(option)
-  console.debug('⚙️ initOdooWebSDK', option)
+  console.debug('⚙️ initOdooWebClient', option)
   getClientManager().mounted((event)=>{
     console.debug(`🪝 mounted: event? `,event);
   });
@@ -40,7 +40,7 @@ async function initOdooWebSDK() {
   // @step get cached session sdk scripts
   const scriptTags = getSdk.value;
   if (scriptTags) {
-    console.debug('initOdooWebSDK, sdk?', scriptTags);
+    console.debug('initOdooWebClient, sdk?', scriptTags);
     // @step load webclient
     getClientManager().loadClient(scriptTags).subscribe({next:(r)=>{
      console.debug('Success loadClient, r?',r);
@@ -70,7 +70,7 @@ async function bootstrap() {
   await router.isReady()
 
   // @step 
-  await initOdooWebSDK()
+  await initOdooWebClient()
   
   app.use(Card)
   app.use(Grid)

@@ -7,15 +7,15 @@
   "author": {
     "name": "artificer",
     "email": "artificer@ixkit.com",
-    "url": "https://github.com/artificer"
+    "url": "https://github.com/ixkit/odookit"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artificer/odoo-site-app.git"
+    "url": "git+https://github.com/ixkit/odoo-site-app.git"
   },
   "bugs": {
-    "url": "https://github.com/artificer/odoo-site-app/issues"
+    "url": "https://github.com/ixkit/odoo-site-app/issues"
   },
   "engines": {
     "node": "^20.9.0 || >=21.7.1",

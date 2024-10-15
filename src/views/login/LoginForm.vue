@@ -32,9 +32,9 @@
     <div class="enter-y mb-10 w-full flex justify-between px-5px">
       <div class="flex items-center">
         <van-switch v-model="rememberMe" size="18px" class="mr-8px" />
-        <span>记住我</span>
+        <span>rememer me</span>
       </div>
-      <a @click="setLoginState(LoginStateEnum.RESET_PASSWORD)">忘记密码?</a>
+      <a @click="setLoginState(LoginStateEnum.RESET_PASSWORD)">forget password?</a>
     </div>
 
     <van-button
@@ -44,7 +44,7 @@
       native-type="submit"
       :loading="loading"
     >
-      登 录
+      Login
     </van-button>
     <van-button
       class="enter-y !rounded-md"
@@ -53,7 +53,7 @@
       block
       @click="setLoginState(LoginStateEnum.REGISTER)"
     >
-      注 册
+      Register
     </van-button>
   </van-form>
 </template>
@@ -88,7 +88,7 @@ function handleSubmit() {
     .then(async () => {
       try {
         loading.value = true
-        showLoadingToast('登录中...')
+        showLoadingToast('Login...')
         const response = await userStore.Login({
           username: formData.username,
           password: formData.password,
@@ -97,7 +97,7 @@ function handleSubmit() {
         // if (code === ResultEnum.SUCCESS) {
         if (response.isSuccess()) {
           const toPath = decodeURIComponent((route.query?.redirect || '/') as string)
-          showSuccessToast('登录成功，即将进入系统')
+          showSuccessToast('Login success! Welcome use Odoo Site 🏪')
           if (route.name === PageEnum.BASE_LOGIN_NAME) {
             router.replace('/')
           }
@@ -106,7 +106,7 @@ function handleSubmit() {
           }
         }
         else {
-          showFailToast(msg || '登录失败')
+          showFailToast(msg || 'Failed login')
         }
       }
       finally {
@@ -114,7 +114,7 @@ function handleSubmit() {
       }
     })
     .catch((ex) => {
-      console.error('验证失败', ex)
+      console.error('Failed login', ex)
     })
 }
 

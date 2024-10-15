@@ -1,13 +1,22 @@
 <template>
   <div class="h-screen items-center justify-center">
-    <div class="my-card m-25px rounded-2xl p-30px shadow-xl">
-      <div class="flex flex-col items-center justify-center p-10px">
-        <Logo class="!w-30" />
+    <div class="my-card m-t-5px  m-l-10px m-r-10px rounded-2xl p-30px shadow-xl">
+      <div class="flex flex-col items-center justify-center ">
+       
+        <div align="center">
+          <a href="https://github.com/ixkit/odoo-site-app">
+            <span style="font-size:50px;">🏪</span>
+          </a>
+          <br>
+          <a href="https://github.com/ixkit/odoo-site-app">
+            <img alt="Odoo Site App" width="20%" height="20%" src="/img/odoo_logo.png"/>
+          </a>
+        </div>
         <div class="text-darkBlue dark:text-garyWhite text-1xl mb-2 mt-2 text-center font-black">
           {{ title }}
         </div>
         <div class="text-center">
-          {{ title }}
+          👉 Seamless reuse the powerful capability of Odoo framework from outside Client Apps.<br>👉 Invoke ORM service handily, maximize the value of the services that implemeted by Python🐍 code.
         </div>
       </div>
     </div>
@@ -94,11 +103,10 @@ async function fetchApps(webClient) {
     "to_buy": false,
     "name": "sale_management",
     "state": "installed",
-    "summary": "从报价到发票",
     "website": "https://www.odoo.com/app/sales",
     "application": true,
     "module_type": "official",
-    "shortdesc": "销售"
+    "shortdesc": "Sales"
 }
 */
 const dataSet = ref([])
@@ -112,15 +120,7 @@ onMounted(() => {
   reloadData();
 })
 
-const getSwipeText = computed(() => {
-  return [
-    {
-      title: '💡 最新技术栈',
-      details: '基于Vue3、Vant4、Vite、TypeScript、UnoCSS等最新技术栈开发',
-    },
-
-  ]
-})
+ 
 </script>
 
 <style scoped lang="less"></style>
