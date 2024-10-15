@@ -1,0 +1,89 @@
+<div id="sdk">
+  <!-- odoo sdk -->
+  <script id="web.layout.odooscript" type="text/javascript">
+    var odoo = {
+      csrf_token: '2bab445fb3bd8716567a82020b2c90402346b48eo1758101924',
+      debug: 'assets',
+    }
+  </script>
+  <script type="text/javascript">
+    // Block to avoid leaking variables in the script scope
+    {
+      odoo.__session_info__ = {
+        uid: 2,
+        is_system: true,
+        is_admin: true,
+        is_internal_user: true,
+        user_context: { lang: 'en_US', tz: 'Asia/Shanghai', uid: 2 },
+        db: 'odoo1717-A2',
+        user_settings: {
+          id: 1,
+          user_id: { id: 2 },
+          is_discuss_sidebar_category_channel_open: true,
+          is_discuss_sidebar_category_chat_open: true,
+          push_to_talk_key: false,
+          use_push_to_talk: false,
+          voice_active_duration: 0,
+          volume_settings_ids: [['ADD', []]],
+        },
+        server_version: '17.0-20240312',
+        server_version_info: [17, 0, 0, 'final', 0, ''],
+        support_url: 'https://www.odoo.com/buy',
+        name: 'Mitchell Admin',
+        username: 'admin',
+        partner_display_name: 'YourCompany, Mitchell Admin',
+        partner_id: 3,
+        'web.base.url': 'http://localhost:8120',
+        active_ids_limit: 20000,
+        profile_session: null,
+        profile_collectors: null,
+        profile_params: null,
+        max_file_upload_size: 134217728,
+        home_action_id: false,
+        cache_hashes: {
+          translations: '28535262749e41f779b326ded1ce01bf44f581e2',
+          load_menus: '82c19ef70537c5ce737a50a7017d3c52afacd5a2acbf68f87942e296264cbf81',
+        },
+        currencies: { 1: { symbol: '$', position: 'before', digits: [69, 2] } },
+        bundle_params: { lang: 'en_US', debug: 'assets' },
+        user_companies: {
+          current_company: 1,
+          allowed_companies: {
+            2: { id: 2, name: 'My Company (Chicago)', sequence: 10, child_ids: [], parent_id: false },
+            1: { id: 1, name: 'My Company (San Francisco)', sequence: 0, child_ids: [], parent_id: false },
+          },
+          disallowed_ancestor_companies: {},
+        },
+        show_effect: true,
+        display_switch_company_menu: true,
+        user_id: [2],
+        max_time_between_keys_in_ms: 100,
+        web_tours: [],
+        tour_disable: true,
+        notification_type: 'email',
+        odoobot_initialized: true,
+        iap_company_enrich: false,
+        is_quick_edit_mode_enabled: false,
+      }
+      const { user_context, cache_hashes } = odoo.__session_info__
+
+      const lang = new URLSearchParams(document.location.search).get('lang')
+      let menuURL = `/web/webclient/load_menus/${cache_hashes.load_menus}`
+      if (lang) {
+        user_context.lang = lang
+        menuURL += `?lang=${lang}`
+      }
+      // odoo.reloadMenus = () => fetch(menuURL).then(res => res.json());
+      /// odoo.loadMenusPromise = odoo.reloadMenus();
+      // Prefetch translations to speedup webclient. This is done in JS because link rel="prefetch"
+      // is not yet supported on safari.
+      // fetch(`/web/webclient/translations/${cache_hashes.translations}?lang=${user_context.lang}`);
+    }
+  </script>
+
+  <script
+    type="text/javascript"
+    src="http://localhost:8120/web/assets/debug/site.web-&gt;assets_web.js"
+    onerror="__odooAssetError=1"
+  ></script>
+</div>
