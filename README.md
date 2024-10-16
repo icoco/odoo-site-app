@@ -14,9 +14,9 @@
 <h1 align="center">Odoo Site App</h1>
 
 
-## Purpose
+## Purpose 🚀
 
-Odoo Site App demo how to use [Odoo WebClient 📡](https://github.com/ixkit/odoo-webclient) from frontend application, through the Odoo WebClien 📡, seamless reuse the powerful capability of Odoo framework from outside Client Apps, invoke [ORM service](https://www.odoo.com/documentation/17.0/developer/reference/frontend/javascript_reference.html#services) handily, maximize the value of the services that implemeted by Python🐍 code.
+Odoo Site App demo how to use [Odoo WebClient 📡](https://github.com/ixkit/odoo-webclient) from frontend application, through the Odoo WebClien 📡, seamless reuse the powerful capability of Odoo framework from outside SPA(Single-Page App) or PWA(Progressive Web App), invoke [ORM service](https://www.odoo.com/documentation/17.0/developer/reference/frontend/javascript_reference.html#services) handily, maximize the value of the services that implemeted by Python🐍 code.
 
 ## Usage Odoo WebClient 📡
   - Install odoo-webclient

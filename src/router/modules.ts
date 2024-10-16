@@ -10,7 +10,7 @@ const routeModuleList: Array<RouteRecordRaw> = [
     component: Layout,
     meta: {
       title: 'Apps',
-      icon: 'i-simple-icons:apps',
+      icon: 'i-simple-icons-odoo',
     },
     children: [
       {
