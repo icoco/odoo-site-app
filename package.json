@@ -56,7 +56,7 @@
     "mitt": "^3.0.1",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
-    "odoo-webclient": "file:/Users/icoco/WorkSpace/2024/prj/odoo/kit/git/npm/odoo-webclient",
+    "odoo-webclient": "^1.0.0",
 
     "pinia": "^2.1.7",
     "pinia-plugin-persist": "^1.0.0",
