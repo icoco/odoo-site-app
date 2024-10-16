@@ -100,7 +100,7 @@ pnpm build
 </details> 
   -->
 
-## 维护者
+## Supporter
 
 [@ixkit](https://github.com/ixkit)
 
